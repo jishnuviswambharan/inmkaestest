@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>CLASS BASED DETAIL VIEW</h1>
+
+
+<ul>
+    <li>{{task.name}}
+        {{task.priority}} <br>
+        {{task.date}} <br>
+        {{task.desc}}<br> </li>
+</ul>
+
+{% endblock %}

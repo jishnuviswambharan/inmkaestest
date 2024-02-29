@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <p>Click<a href="{%url 'todoapp:details' %}"> here </a>for view all Tasks. </p>
+    <div class="row">
+        <div class="col-md-6">
+            
+            <div class="card mb-6">
+                
+                <h4 class="card-header text-center">CREATE NEW TASK HERE !</h4>
+                <div class="form-container shadow p-3">
+                    <form method="post" action="" class="row">
+                        {% csrf_token %}
+                        <div class="form-group col-md-6">
+                            <label for="task">Task : </label>
+                            <input type="text" class="form-control" id="Task" name="Task" placeholder="Task Name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="priority">Priority:</label>
+                            <input type="text" class="form-control" name="priority" id="" placeholder="Priority">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="task">Task Date:</label>
+                            <input type="date" class="form-control" id="task_date" name="date" required>
+                        </div>
+
+                        <div class="form-group col-md-12 text-center mt-2 cust_button">
+                            <input type="submit" name="submit" class="btn btn-success">
+                        <!-- </div>
+                        <div class="form-group col-md-12 text-center mt-2"> -->
+                            <input type="reset" name="" class="btn btn-danger">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-6">
+                <h4 class="card-header text-center">TASK TO BE COMPLETED</h4>
+                <br>
+                {% for i in task %}
+                <div class="shadow card">
+                    <div class="card-body">
+                      <h5 class="card-title">Task Name : {{i.name}}</h5>
+                      <p>Task End Date : {{i.date}}</p>
+                      <p class="priority">Priority : {{i.priority}}</p>
+                      <!-- <p>{{i.desc}}</p> -->
+                      <a href="{% url 'todoapp:update' i.id %}" class="btn btn-primary">Update Task</a>
+                      <a href="{% url 'todoapp:delete' i.id %}" class="btn btn-success">Completed</a>
+                      
+                      
+                      <!-- <a href="#" class="card-link">Another link</a> -->
+                    </div>
+                    {% endfor %}
+                </div>
+<!--                    <a href="#" class="btn btn-primary">Done</a>-->
+
+                    <!-- Add 'btn btn-success' class for the update button to make it green -->
+                    <!-- <button class="link-button btn btn-success" onclick="window.location='/task/23/update/'">Update Task</button> -->
+
+                    <!-- Add 'btn btn-danger' class for the delete button to make it red -->
+                    <!-- <button class="link-button btn btn-danger" onclick="window.location='/task_delete/23/'">Delete Task</button> -->
+
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+/* body{
+    overflow: hidden;
+} */
+
+/* logo section */
+
+.title-logo{
+    width: 75px;
+}
+
+/* Nav bar section */
+
+.banner-text{
+    background-color:rgb(235, 5, 132);
+    padding: 10px;
+    /* border-radius: 50%; */
+    margin-top: 10px;
+}
+
+.cust_button{
+    transition: 2s;
+}
+
+.cust_button :hover{
+    background-color: cornflowerblue;
+}
+
+.container{
+    margin-top: 10px;
+}
+
+.my_footer{
+    background-color: lightcyan;
+    height: 30px;
+}
+
+.cust_todo{
+    text-align: end;
+    align-items: end;
+    align-self: flex-end;
+    text-decoration: none;
+    color: black;
+    transition: 2s;
+}
+.cust_todo :hover{
+    background-color: red;
+}
+
+.p_deatail{
+    color: red;
+    text-decoration: red;
+}

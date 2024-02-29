@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'img/logo.jpg' %}">
+    <title>TODO LIST</title>
+    
+</head>
+<body class="body">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a> -->
+    <!-- </nav> -->
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner">
+                    <div class="banner-text">
+                        <a href="#"><h5>Todo Details</h5></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-1">
+                    <div class="banner-text">
+                        <h3 name="hi">Todo Details</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-1">
+                    <div class="banner-text">
+                        <div class="split left">
+                            <!-- <img src="{% static 'img/logo.jpg' %}" alt="Logo" class="title-logo"> -->
+                        </div>
+                        <div class="split right">
+                            <h3 class="text-center custom_head">TODO LIST</h3>
+                            <p class="text-center custom_text">Remember Your Daily Work !!!!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        {% block content %}
+        {% endblock %}
+        {% include 'footer.html' %}
+
+    
+</body>
+</html>

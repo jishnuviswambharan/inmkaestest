@@ -1,0 +1,10 @@
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{f.as_p}}
+    <input type="submit" name="submit" class="btn btn-success">
+</form>
+
+<p class="p_deatail">* Please not that the details shown in table (model) name. Plese fill it carefully.</p>
+{% endblock %}

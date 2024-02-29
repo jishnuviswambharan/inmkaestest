@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for i in task %}
+<ul>
+    <li>
+        <b>Task Name :</b> {{i.name}} <br>
+        <b>Priority :</b> {{i.priority}} <br>
+        <b>Date :</b> {{i.date}} <br>
+        <b>Description :</b> {{i.desc}}<br> 
+    </li>
+</ul>
+{% endfor %}
+
+<a href="{% url 'todoapp:home' %}">Return To Home</a>
+
+
+{% endblock %}
